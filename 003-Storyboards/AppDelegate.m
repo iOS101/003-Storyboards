@@ -7,13 +7,31 @@
 //
 
 #import "AppDelegate.h"
+#import "Player.h"
+#import "PlayersViewController.h"
 
 @implementation AppDelegate
 
+{
+  NSMutableArray *players;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+  players = [NSMutableArray arrayWithCapacity:20];
+  
+  [players addObject:[[Player alloc] initWithName:@"Li Luo" andGame:@"Momoda" andRating:4]];
+  [players addObject:[[Player alloc] initWithName:@"Qi Miao" andGame:@"Thress!" andRating:5]];
+  [players addObject:[[Player alloc] initWithName:@"Dave Brubeck" andGame:@"Daluo" andRating:2]];
+  
+  UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+  UINavigationController *navigationController = [tabBarController viewControllers][0];
+  
+  
+  PlayersViewController *playersViewController = [navigationController viewControllers][0];
+  playersViewController.players = players;
+  
+  return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B15EC8FA18EBF05C00857BC2 /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15EC8F918EBF05C00857BC2 /* PlayersViewController.m */; };
+		B15EC8FD18EBF16500857BC2 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B15EC8FC18EBF16500857BC2 /* Player.m */; };
 		B19245C718EB1411004AD926 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19245C618EB1411004AD926 /* Foundation.framework */; };
 		B19245C918EB1411004AD926 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19245C818EB1411004AD926 /* CoreGraphics.framework */; };
 		B19245CB18EB1411004AD926 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19245CA18EB1411004AD926 /* UIKit.framework */; };
@@ -21,6 +23,7 @@
 		B19245E818EB1411004AD926 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19245CA18EB1411004AD926 /* UIKit.framework */; };
 		B19245F018EB1411004AD926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B19245EE18EB1411004AD926 /* InfoPlist.strings */; };
 		B19245F218EB1411004AD926 /* _03_StoryboardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B19245F118EB1411004AD926 /* _03_StoryboardsTests.m */; };
+		B1FBC2A218EC5D60009BFB3D /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FBC2A118EC5D60009BFB3D /* PlayerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B15EC8F818EBF05C00857BC2 /* PlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersViewController.h; sourceTree = "<group>"; };
+		B15EC8F918EBF05C00857BC2 /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
+		B15EC8FB18EBF16500857BC2 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		B15EC8FC18EBF16500857BC2 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		B19245C318EB1411004AD926 /* 003-Storyboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "003-Storyboards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19245C618EB1411004AD926 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B19245C818EB1411004AD926 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +60,8 @@
 		B19245ED18EB1411004AD926 /* 003-StoryboardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "003-StoryboardsTests-Info.plist"; sourceTree = "<group>"; };
 		B19245EF18EB1411004AD926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B19245F118EB1411004AD926 /* _03_StoryboardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _03_StoryboardsTests.m; sourceTree = "<group>"; };
+		B1FBC2A018EC5D60009BFB3D /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		B1FBC2A118EC5D60009BFB3D /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +124,12 @@
 				B19245D518EB1411004AD926 /* AppDelegate.h */,
 				B19245D618EB1411004AD926 /* AppDelegate.m */,
 				B19245D818EB1411004AD926 /* Main.storyboard */,
+				B15EC8FB18EBF16500857BC2 /* Player.h */,
+				B15EC8FC18EBF16500857BC2 /* Player.m */,
+				B15EC8F818EBF05C00857BC2 /* PlayersViewController.h */,
+				B15EC8F918EBF05C00857BC2 /* PlayersViewController.m */,
+				B1FBC2A018EC5D60009BFB3D /* PlayerCell.h */,
+				B1FBC2A118EC5D60009BFB3D /* PlayerCell.m */,
 				B19245DB18EB1411004AD926 /* ViewController.h */,
 				B19245DC18EB1411004AD926 /* ViewController.m */,
 				B19245DE18EB1411004AD926 /* Images.xcassets */,
@@ -250,8 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19245DD18EB1411004AD926 /* ViewController.m in Sources */,
+				B15EC8FA18EBF05C00857BC2 /* PlayersViewController.m in Sources */,
 				B19245D718EB1411004AD926 /* AppDelegate.m in Sources */,
 				B19245D318EB1411004AD926 /* main.m in Sources */,
+				B1FBC2A218EC5D60009BFB3D /* PlayerCell.m in Sources */,
+				B15EC8FD18EBF16500857BC2 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +397,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "003-Storyboards/003-Storyboards-Prefix.pch";
 				INFOPLIST_FILE = "003-Storyboards/003-Storyboards-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +411,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "003-Storyboards/003-Storyboards-Prefix.pch";
 				INFOPLIST_FILE = "003-Storyboards/003-Storyboards-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +476,7 @@
 				B19245F718EB1411004AD926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B19245F818EB1411004AD926 /* Build configuration list for PBXNativeTarget "003-StoryboardsTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +485,7 @@
 				B19245FA18EB1411004AD926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
