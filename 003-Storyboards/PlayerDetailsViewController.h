@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 #import "GamePickerViewController.h"
+#import "RatingPickerViewController.h"
 
 @class PlayerDetailsViewController;
 
@@ -19,10 +20,11 @@
 @end
 
 
-@interface PlayerDetailsViewController : UITableViewController <GamePickerViewControllerDelegate>
+@interface PlayerDetailsViewController : UITableViewController <GamePickerViewControllerDelegate, RatingPickerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 
 @property (nonatomic, weak) id <PlayerDetailsViewControllerDelegate> delegate;
 

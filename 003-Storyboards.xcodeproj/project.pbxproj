@@ -26,6 +26,7 @@
 		B1FBC2A218EC5D60009BFB3D /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FBC2A118EC5D60009BFB3D /* PlayerCell.m */; };
 		B1FBC2A518ECE022009BFB3D /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FBC2A418ECE022009BFB3D /* PlayerDetailsViewController.m */; };
 		B1FBC2A818ED2E5D009BFB3D /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FBC2A718ED2E5D009BFB3D /* GamePickerViewController.m */; };
+		B1FBC2AE18ED49A5009BFB3D /* RatingPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FBC2AD18ED49A5009BFB3D /* RatingPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		B1FBC2A418ECE022009BFB3D /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
 		B1FBC2A618ED2E5D009BFB3D /* GamePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
 		B1FBC2A718ED2E5D009BFB3D /* GamePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePickerViewController.m; sourceTree = "<group>"; };
+		B1FBC2AC18ED49A5009BFB3D /* RatingPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingPickerViewController.h; sourceTree = "<group>"; };
+		B1FBC2AD18ED49A5009BFB3D /* RatingPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				B1FBC2A418ECE022009BFB3D /* PlayerDetailsViewController.m */,
 				B1FBC2A618ED2E5D009BFB3D /* GamePickerViewController.h */,
 				B1FBC2A718ED2E5D009BFB3D /* GamePickerViewController.m */,
+				B1FBC2AC18ED49A5009BFB3D /* RatingPickerViewController.h */,
+				B1FBC2AD18ED49A5009BFB3D /* RatingPickerViewController.m */,
 				B19245DB18EB1411004AD926 /* ViewController.h */,
 				B19245DC18EB1411004AD926 /* ViewController.m */,
 				B19245DE18EB1411004AD926 /* Images.xcassets */,
@@ -282,6 +287,7 @@
 				B1FBC2A218EC5D60009BFB3D /* PlayerCell.m in Sources */,
 				B15EC8FD18EBF16500857BC2 /* Player.m in Sources */,
 				B1FBC2A518ECE022009BFB3D /* PlayerDetailsViewController.m in Sources */,
+				B1FBC2AE18ED49A5009BFB3D /* RatingPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

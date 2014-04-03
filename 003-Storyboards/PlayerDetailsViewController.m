@@ -18,6 +18,7 @@
 
 {
   NSString *game;
+  NSString *rating;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -35,6 +36,7 @@
   if ((self = [super initWithCoder:aDecoder])) {
     NSLog(@"init PlayerDetailsviewController");
     game = @"Chess";
+    rating = @"3";
   }
   return self;
 }
@@ -50,6 +52,7 @@
 {
   [super viewDidLoad];
   self.detailLabel.text = game;
+  self.ratingLabel.text = rating;
 }
 
 
@@ -77,7 +80,7 @@
 {
   Player *player = [[Player alloc] initWithName:self.nameTextField.text
                                         andGame:game
-                                      andRating:1];
+                                      andRating:[rating intValue]];
   
   [self.delegate playerDetailsViewController:self didAddPlayer:player];
 }
@@ -88,7 +91,11 @@
   if ([segue.identifier isEqualToString:@"PickGame"]) {
     GamePickerViewController *gamePickerViewController = segue.destinationViewController;
     gamePickerViewController.delegate = self;
-    gamePickerViewController.game = game;
+  }
+  
+  if ([segue.identifier isEqualToString:@"PickRating"]) {
+    RatingPickerViewController *ratingPickerViewController = segue.destinationViewController;
+    ratingPickerViewController.delegate = self;
   }
 }
 
@@ -99,6 +106,13 @@
   game = theGame;
   self.detailLabel.text = game;
   [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)ratingPickerViewController:(RatingPickerViewController *)controller didSelectRating:(NSString *)theRating
+{
+  rating = theRating;
+  self.ratingLabel.text = rating;
+  [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
