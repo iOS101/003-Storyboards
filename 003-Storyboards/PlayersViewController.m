@@ -74,18 +74,26 @@
 
 - (UIImage *)imageForRating:(int)rating
 {
-  return [UIImage imageNamed:[NSString stringWithFormat:@"%dStarsSmall", rating]];
+  NSString *imageName;
+  if (rating > 1) {
+    imageName = [NSString stringWithFormat:@"%dStarsSmall", rating];
+  } else {
+    imageName = [NSString stringWithFormat:@"%dStarSmall", rating];
+  }
+  return [UIImage imageNamed:imageName];
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (void)playerDetailsViewController:(PlayerDetailsViewController *)controller didAddPlayer:(Player *)player
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+  
+  [self.players addObject:player];
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.players count] - 1) inSection:0];
+  [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
 
 
 // Override to support editing the table view.
@@ -94,39 +102,35 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
       [self.players removeObjectAtIndex:indexPath.row];
       [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        // Delete the row from the data source
-        // [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
 
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+#pragma mark - PlayerDetailsViewControllerDelegate
+
+- (void)playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *)controller
 {
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (void)playerDetailsViewControllerDidSave:(PlayerDetailsViewController *)controller
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+  if ([segue.identifier isEqualToString:@"AddPlayer"]) {
+    UINavigationController *navigationController = segue.destinationViewController;
+    PlayerDetailsViewController *playerDetailsViewController = [navigationController viewControllers][0];
+    playerDetailsViewController.delegate = self;
+  }
 }
-*/
+
 
 @end
